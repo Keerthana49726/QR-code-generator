@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>QR Code Generator</h1>
+        <div class="tabs">
+            <div class="tab active" data-target="url-tab"><i class="icon fas fa-link"></i> URL</div>
+            <div class="tab" data-target="pdf-tab"><i class="icon fas fa-file-pdf"></i> PDF</div>
+            <div class="tab" data-target="app-tab"><i class="icon fas fa-mobile-alt"></i> App</div>
+            <div class="tab" data-target="sms-tab"><i class="icon fas fa-sms"></i> SMS</div>
+            <div class="tab" data-target="phone-tab"><i class="icon fas fa-phone"></i> Phone</div>
+            <div class="tab" data-target="email-tab"><i class="icon fas fa-envelope"></i> Email</div>
+            <div class="tab" data-target="contact-tab"><i class="icon fas fa-user"></i> Contact</div>
+            <div class="tab" data-target="multiurl-tab"><i class="icon fas fa-link"></i> Multi-URL</div>
+            <div class="tab" data-target="text-tab"><i class="icon fas fa-file-alt"></i> Plain Text</div>
+        </div>
+        <div class="tab-content active" id="url-tab">
+            <input type="text" id="url-input" placeholder="Enter URL">
+        </div>
+        <div class="tab-content" id="pdf-tab">
+            <input type="text" id="pdf-input" placeholder="Enter PDF URL">
+        </div>
+        <div class="tab-content" id="app-tab">
+            <input type="text" id="app-input" placeholder="Enter App Link">
+        </div>
+        <div class="tab-content" id="sms-tab">
+            <input type="text" id="sms-number" placeholder="Enter phone number">
+            <textarea id="sms-message" placeholder="Enter message"></textarea>
+        </div>
+        <div class="tab-content" id="phone-tab">
+            <input type="text" id="phone-input" placeholder="Enter phone number">
+        </div>
+        <div class="tab-content" id="email-tab">
+            <input type="email" id="email-input" placeholder="Enter email address">
+            <textarea id="email-body" placeholder="Enter email body"></textarea>
+        </div>
+        <div class="tab-content" id="contact-tab">
+            <input type="text" id="contact-name" placeholder="Enter name">
+            <input type="tel" id="contact-phone" placeholder="Enter phone number">
+        </div>
+        <div class="tab-content" id="multiurl-tab">
+            <textarea id="multiurl-input" placeholder="Enter multiple URLs (one per line)"></textarea>
+        </div>
+        <div class="tab-content" id="text-tab">
+            <textarea id="text-input" placeholder="Enter text"></textarea>
+        </div>
+        <div class="actions">
+            <button id="generate-btn"><i class="fas fa-qrcode"></i> Generate QR Code</button>
+            <select id="format-select">
+                <option value="png">PNG</option>
+                <option value="jpg">JPG</option>
+            </select>
+            <button id="download-btn"><i class="fas fa-download"></i> Download</button>
+            <button id="copy-link-btn"><i class="fas fa-copy"></i> Copy QR Code Link</button>
+        </div>
+        <div id="qr-code"></div>
+    </div>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
